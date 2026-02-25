@@ -140,3 +140,38 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 800px) {
+  /* Make table rows and cells behave like blocks so they stack */
+  table, tbody, tr, td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  
+  /* Center align the profile picture on mobile */
+  td[style*="width:37%"] {
+    text-align: center;
+    padding-top: 0 !important;
+  }
+  
+  /* Size down the profile picture slightly for mobile */
+  td[style*="width:37%"] img {
+    width: 60% !important; 
+    margin: 0 auto;
+  }
+  
+  /* Adjust the project GIFs/images to take up full width before the text */
+  td[style*="width:20%"] {
+    padding-bottom: 0 !important;
+  }
+  
+  td[style*="width:20%"] img {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
