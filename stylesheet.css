@@ -174,4 +174,30 @@ span.highlight {
     margin: 0 auto;
     display: block;
   }
+
+  /* --- Icon Link Styling --- */
+.icon-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-link svg {
+  vertical-align: text-bottom;
+  margin-right: 4px;
+  transition: fill 0.2s ease-in-out; /* Smooth color transition */
+}
+
+/* Default colors for specific icons */
+.icon-arxiv { fill: #B31B1B; } /* Cornell Red */
+.icon-github { fill: currentColor; } /* Matches text color */
+.icon-paper { fill: #ed2224; } /* Red */
+
+/* Make icons turn orange when the link is hovered, matching your a:hover */
+.icon-link:hover .icon-arxiv,
+.icon-link:hover .icon-github,
+.icon-link:hover .icon-paper {
+  fill: #f09228;
+}
+
 }
